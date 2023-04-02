@@ -1,0 +1,52 @@
+{% extends "layout.html" %} 
+{% block title %} {{item.name}} {% endblock %} 
+
+
+{% block content %}
+<style>
+pre{
+     display: block; 
+     padding: 10px; 
+     margin: 0 0 10.5px; 
+     font-size: 1em; 
+     line-height: 1.42857143; 
+     word-break: break-all; 
+     word-wrap: break-word; 
+     color: black; 
+     background-color: #fff; 
+     border: none!important; 
+     border-radius: 4px; 
+     overflow: none!important;
+     font-family: inherit!important;
+}
+</style>
+
+<h1>{{item.name}}</h1>
+ <h4> <strong>Owned by: </strong> {{user.firstname}} {{user.lastname}}</h4>
+
+ <h4> <strong>Owner notes:  </strong> </h4>
+
+<pre> {{item.details|e}}</pre>
+
+<div class="contact">
+    <h3> How to contact the owner:</h3>
+<p> 
+    Email: {{user.email}}
+    <br/>
+    Phone: 
+    <br/>
+</p>
+<div class="scanned-qrcode"> 
+<!--QR code that was scanned: <br/>
+<img src=https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ url_for("item_views.viewItem", item_id=item.id, _external=True) }}> </img>
+</div>-->
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

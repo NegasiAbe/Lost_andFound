@@ -1,0 +1,10 @@
+Flask
+flask_sqlalchemy
+werkzeug
+psycopg2
+flask-wtf
+flask-login
+gunicorn
+flask-testing
+coverage
+coveralls
